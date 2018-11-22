@@ -21,5 +21,17 @@ export default StyleSheet.create({
         height: DEFAULT_DOT_SIZE,
         borderRadius: DEFAULT_DOT_SIZE / 2,
         backgroundColor: DEFAULT_DOT_COLOR
+    },
+    leftCloser:{
+        borderBottomLeftRadius:10,
+        borderTopLeftRadius:10,
+        height: 5,
+        width:15
+    },
+    rightCloser:{
+        borderBottomRightRadius:10,
+        borderTopRightRadius:10,
+        height: 5,
+        width:15
     }
 });
