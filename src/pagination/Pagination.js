@@ -123,7 +123,7 @@ export default class Pagination extends PureComponent {
     }
 
     render () {
-        const { dotsLength, containerStyle, vertical } = this.props;
+        const { dotsLength, containerStyle, vertical, dotColor, inactiveDotColor } = this.props;
 
         if (!dotsLength || dotsLength < 2) {
             return false;
@@ -137,10 +137,17 @@ export default class Pagination extends PureComponent {
             },
             containerStyle || {}
         ];
+        const cornerStyle ={
+            backgroundColor:( this._activeDotIndex==0)?dotColor:inactiveDotColor,
+           opacity:( this._activeDotIndex==0)?1:0.4,
+           
+        }
 
         return (
             <View pointerEvents={'box-none'} style={style}>
+             <View style={[styles.leftCloser,cornerStyle]}/>
                 { this.dots }
+                <View style={[styles.rightCloser,cornerStyle]}/>
             </View>
         );
     }
