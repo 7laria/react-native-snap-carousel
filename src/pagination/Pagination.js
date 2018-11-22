@@ -147,7 +147,7 @@ export default class Pagination extends PureComponent {
             <View pointerEvents={'box-none'} style={style}>
              <View style={[styles.leftCloser,cornerStyle]}/>
                 { this.dots }
-                <View style={[styles.rightCloser,cornerStyle]}/>
+                <View style={[styles.rightCloser,cornerStyle,{  backgroundColor:( this._activeDotIndex==dotsLength)?dotColor:inactiveDotColor,}]}/>
             </View>
         );
     }
