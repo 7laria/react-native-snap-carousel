@@ -100,12 +100,12 @@ export default class PaginationDot extends PureComponent {
                 inputRange: [0, 1],
                 outputRange: [inactiveOpacity, 1]
             }),
-            transform: [{
-                scale: animTransform.interpolate({
-                    inputRange: [0, 1],
-                    outputRange: [inactiveScale, 1]
-                })
-            }]
+            // transform: [{
+            //     scale: animTransform.interpolate({
+            //         inputRange: [0, 1],
+            //         outputRange: [inactiveScale, 1]
+            //     })
+            // }]
         };
         const animatedColor = this._shouldAnimateColor ? {
             backgroundColor: animColor.interpolate({
